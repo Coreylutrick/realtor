@@ -1,3 +1,12 @@
 .Listings {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  overflow: scroll;
   background-color: darkslateblue;
+
+  ul{
+    padding: 0;
+  }
 }
