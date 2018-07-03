@@ -1,6 +1,7 @@
 import React from 'react';
 import {listingOptionalShape} from '../../propz/listingProp';
 import {formatPrice} from '../../helper';
+import BuildingTile from '../BuildingTile/BuildingTile';
 import './Building.css';
 
 class Buildings extends React.Component
@@ -34,6 +35,28 @@ class Buildings extends React.Component
             <h5>{listing.squareFootage} ft<sup>2</sup></h5>
             <p>{listing.description}</p>
           </div>
+        </div>
+        <div className="row">
+          <BuildingTile
+            imageSrc= 'cal'
+            altText= 'calender'
+            pTagText= {`Built: ${listing.yearBuilt}`}
+          />
+          <BuildingTile
+            imageSrc= 'hill'
+            altText= 'hill'
+            pTagText= {listing.lotInAcres}
+          />
+          <BuildingTile
+            imageSrc= 'flame'
+            altText= 'flame'
+            pTagText= {listing.heating}
+          />
+          <BuildingTile
+            imageSrc= 'snow'
+            altText= 'snowflake'
+            pTagText= {listing.cooling}
+          />
         </div>
       </div>
     );
